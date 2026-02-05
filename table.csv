@@ -1,0 +1,6 @@
+Feature,AppFlowy,AFFiNE,Outline,Docmost,SiYuan,Logseq,BookStack,Trilium,La Suite Docs,Obsidian,Confluence,Notion
+[Demo](features.md#demo),,"✅","[✅](https://app.getoutline.com/create)","❌(Free cloud trial)",,,"[✅](https://demo.bookstackapp.com/)","[✅](https://demo.bookstackapp.com/)","[🚧](https://notes.cloudron.downes.ca/share/oeqPQJ7FLW2x)(readonly)","[✅](https://impress-preprod.beta.numerique.gouv.fr/docs/6ee5aac4-4fb9-457d-95bf-bb56c2467713/)",,,
+[Web App](features.md#web-app),✅,✅,✅,✅,,✅,✅,✅,✅,,,
+[Android App](features.md#android-app),✅,"[✅](https://play.google.com/store/apps/details?id=app.affine.pro&pli=1)",❌,❌,"[✅4.4](https://play.google.com/store/apps/details?id=org.b3log.siyuan)","[✅](https://demo.bookstackapp.com/)",❌,"[🚧](https://apt.izzysoft.de/fdroid/index/apk/eu.fliegendewurst.triliumdroid)",❌,✅ 4.2,,
+[iOS App](features.md#ios-app),✅ 4.7,"[✅](https://apps.apple.com/us/app/notes-whiteboard-ai-affine/id6736937980) 4.9",❌,❌,,"[✅](https://obsidian.md/download)",❌,❌,❌,✅ 4.5,,
+[Desktop App](features.md#desktop-app),✅,"[✅](https://affine.pro/download)([Flatpak](https://github.com/toeverything/AFFiNE/issues/11698))",,❌,"[✅4.5](https://apps.apple.com/us/app/siyuan/id1583226508)","[✅](https://obsidian.md/download)",❌,✅,❌,,,
