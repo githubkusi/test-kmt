@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Comparison Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Software Comparison Table</h2>
+    <table id="comparisonTable" class="display">
+        </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+<script>
+    // 1. Point this to your CSV file
+    const csvUrl = 'comparison.csv';
+
+    Papa.parse(csvUrl, {
+        download: true,
+        header: true,
+        complete: function(results) {
+            const data = results.data;
+            const columns = Object.keys(data[0]).map(key => ({ 
+                title: key, 
+                data: key,
+                render: function(data) {
+                    // This helper converts Markdown links [Text](URL) to HTML links
+                    if (typeof data === 'string') {
+                        return data.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+                    }
+                    return data;
+                }
+            }));
+
+            $('#comparisonTable').DataTable({
+                data: data,
+                columns: columns,
+                pageLength: 25,
+                responsive: true
+            });
+        }
+    });
+</script>
+</body>
+</html>
+
